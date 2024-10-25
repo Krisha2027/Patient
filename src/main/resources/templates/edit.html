@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Edit</title>
+</head>
+<body>
+	<form action="/patient/edit" method="post">
+	<input type="hidden" name="id" th:value="${patient.id}">
+	<p>Name:<input type="text" name="name" th:value="${patient.name}"></p>
+	<p>Disease:<input type="text" name="disease" th:value="${patient.disease}" ></p>
+	<p>Admission Date:<input type="text" name="admissionDate" th:value="${patient.admissionDate}"></p>
+	<button type="submit">Edit Patient</button>
+	</form>
+</body>
+</html>

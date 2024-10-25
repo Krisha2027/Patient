@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>ID</th>
+			<th>Name</th>
+			<th>Disease</th>
+			<th>AdmissionDate</th>	
+			<th>Actions</th>
+		</tr>
+		<tr th:each="p:${patients}">
+			<td th:text="${p.id}"></td>
+			<td th:text="${p.name}"></td>
+			<td th:text="${p.disease}"></td>
+			<td th:text="${p.admissionDate}"></td>
+			<td>
+				<a th:href="@{/patient/delete/{id}(id=${p.id})}">Delete</a>
+			</td>
+			<td>
+				<a th:href="@{/patient/edit/{id}(id=${p.id})}">Edit</a>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
